@@ -16,16 +16,14 @@ reasons = [
     "Sanjeev Kapoor is no match for your cooking!"
 ]
 
-# Button to show reason and play music
+# When the button is clicked
 if st.button("Show me a reason 💌"):
     reason = random.choice(reasons)
     st.success(reason)
 
-    # Play the Bulleya song when the reason is displayed
-    audio_file = open("Bulleya-Sultan.mp3", "rb")  # Make sure this file is in the same directory as your app
+    # Play the Bulleya song after the button is clicked
+    audio_file = open("Bulleya-Sultan.mp3", "rb")  # Ensure the song is in the same folder as this script
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format="audio/mp3")
 
-# Closing message
-st.markdown("---")
-st.write("Love you, Mom! 💐")
+
